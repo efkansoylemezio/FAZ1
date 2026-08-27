@@ -1,0 +1,25 @@
+# Secrets — ASLA commit etme
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+secrets/
+*.local
+
+# Dependencies & build
+node_modules/
+dist/
+build/
+coverage/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+npm-debug.log*
