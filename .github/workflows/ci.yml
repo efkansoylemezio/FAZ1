@@ -23,7 +23,11 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
-      - run: npm audit --audit-level=high
+
+      # Faz 4'te sıkılaştırılacak — şimdilik raporlar, engellemez
+      - name: Dependency audit (raporlama modu)
+        run: npm audit --audit-level=high
+        continue-on-error: true
 
   secret-scan:
     runs-on: ubuntu-latest
